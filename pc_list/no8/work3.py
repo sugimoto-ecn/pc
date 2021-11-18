@@ -10,14 +10,14 @@ led_pwm.value = 0.1
  
 def increment_pwm():
     global led_pwm
-    if led_pwm.value >= 1.0:
+    if led_pwm.value >= 0.95:
         return
     led_pwm.value += 0.05
     print('increment')
 
 def decrement_pwm():
     global led_pwm
-    if led_pwm.value <= 0:
+    if led_pwm.value <= 0.5:
         return
     led_pwm.value -= 0.05
     print("decrement")
