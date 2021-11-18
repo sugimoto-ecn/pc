@@ -21,11 +21,10 @@ def decrement_pwm():
     print("decrement")
  
 def main_loop():
-    global pwm_value
+    global pwm_value , p_button, n_button
     while True:
         p_button.when_pressed = increment_pwm
         n_button.when_pressed = decrement_pwm
-        led_pwm = PWMLED(led_pin)
  
 if __name__ == '__main__':
     main_loop()
