@@ -9,15 +9,15 @@ led_pwm = PWMLED(17)
 led_pwm.value = 0.1
  
 def increment_pwm():
-    global pwm_value
+    global led_pwm
 
-    pwm_value += 0.1
+    led_pwm.value += 0.1
     print('increment')
 
 def decrement_pwm():
-    global pwm_value
+    global led_pwm
 
-    pwm_value -= 0.1
+    led_pwm.value -= 0.1
     print("decrement")
  
 def main_loop():
